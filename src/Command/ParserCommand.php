@@ -2,6 +2,7 @@
 
 namespace App\Command;
 
+use App\Service\Provider\UbuntuCertifiedHardwareSite;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -24,18 +25,8 @@ class ParserCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $io = new SymfonyStyle($input, $output);
-        $arg1 = $input->getArgument('arg1');
-
-        if ($arg1) {
-            $io->note(sprintf('You passed an argument: %s', $arg1));
-        }
-
-        if ($input->getOption('option1')) {
-            // ...
-        }
-
-        $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
+        $parser = new UbuntuCertifiedHardwareSite();
+        $parser->hardwares();
 
         return 0;
     }
