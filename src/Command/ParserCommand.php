@@ -98,7 +98,6 @@ class ParserCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-
         $parser = new UbuntuCertifiedHardwareSite();
         $this->insertVendors($parser);
         $this->insertCategory();

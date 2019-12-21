@@ -12,11 +12,11 @@ services:
     ports:
       - 5432:5432
 
-  app:
-    image: php:7.4
-    working_dir: /app
-    volumes:
-      - $PWD:/app
-    ports:
-      - 8888:8888
-    command: ./bin/console server:run 0.0.0.0:8888
+#  app:
+#    build: .
+#    working_dir: /app
+#    volumes:
+#      - $PWD:/app
+#    ports:
+#      - 8888:8888
+#    command: ./bin/console server:run 0.0.0.0:8888

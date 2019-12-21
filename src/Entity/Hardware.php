@@ -43,6 +43,15 @@ class Hardware
         return $this->id;
     }
 
+    public function getFullName()
+    {
+        return implode(' ', [
+           $this->getCategory()->getName(),
+           $this->getVendor()->getName(),
+           $this->getName(),
+        ]);
+    }
+
     public function getName(): ?string
     {
         return $this->name;
