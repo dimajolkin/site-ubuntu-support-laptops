@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: site
+      POSTGRES_PASSWORD: root
+    volumes:
+      - ./var/pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  app:
+    image: php:7.4
+    working_dir: /app
+    volumes:
+      - $PWD:/app
+    ports:
+      - 8888:8888
+    command: ./bin/console server:run 0.0.0.0:8888

@@ -47,4 +47,15 @@ class VendorRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function exist(Vendor $vendor): bool
+    {
+        return (bool) $this->findOneBy(['name' => $vendor->getName()]);
+    }
+
+
+    public function getByName(string $string): ?Vendor
+    {
+        return $this->findOneBy(['name' => $string]);
+    }
 }

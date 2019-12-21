@@ -47,4 +47,11 @@ class HardwareRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function exist(Hardware $hardware): bool
+    {
+        return (bool) $this->findOneBy([
+           'link' => $hardware->getLink(),
+        ]);
+    }
 }

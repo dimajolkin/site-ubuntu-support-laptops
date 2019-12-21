@@ -17,6 +17,9 @@ use Symfony\Component\DomCrawler\Crawler;
 class UbuntuCertifiedHardwareSite
 {
 
+    /**
+     * @return iterable|Vendor[]
+     */
     public function parseVendors(): iterable
     {
         $list = [];
@@ -35,11 +38,9 @@ class UbuntuCertifiedHardwareSite
                 $tds[] = trim($node->nodeValue);
             }
             if ($tds && $i) {
-                $list[] = [
-                    'vendor' => $tds[0],
-                    'desktop' => $tds[1],
-                    'laptop' => $tds[2],
-                ];
+                $vendor = new Vendor();
+                $vendor->setName($tds[0]);
+                $list[] = $vendor;
             }
 
             if (!$tds && $i) {
@@ -52,15 +53,18 @@ class UbuntuCertifiedHardwareSite
     /**
      * @param Category $category
      * @param Vendor $vendor
+     * @param int $page
      * @return Hardware[]
      */
-    public function getHardwares(Category $category, Vendor $vendor)
+    public function getHardwares(Category $category, Vendor $vendor, int $page)
     {
         $filters = [
             'category' => $category->getName(), // 'Desktop', //Laptop
             'vendors' => $vendor->getName(),
+            'page' => $page,
         ];
         $html = file_get_contents('https://certification.ubuntu.com/desktop/models?' . http_build_query($filters));
+
         $crawler = new Crawler($html);
         $list = [];
         foreach ($crawler->filter('ul[class="model-list"] li') as $node) {
@@ -75,7 +79,7 @@ class UbuntuCertifiedHardwareSite
             $hardware->setCategory($category);
             $hardware->setVendor($vendor);
 
-            yield $hardware;
+            $list[] = $hardware;
         }
 
         return $list;
