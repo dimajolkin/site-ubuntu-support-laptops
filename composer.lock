@@ -4,8 +4,94 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43a8dfa6d5ba8187ed646ba0dd964695",
+    "content-hash": "7426700a67d538238e50c9c66447134f",
     "packages": [
+        {
+            "name": "buchin/google-image-grabber",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/buchin/google-image-grabber.git",
+                "reference": "9e8d5d19cdb00b8ab7139c03f47282282dbd19b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/buchin/google-image-grabber/zipball/9e8d5d19cdb00b8ab7139c03f47282282dbd19b1",
+                "reference": "9e8d5d19cdb00b8ab7139c03f47282282dbd19b1",
+                "shasum": ""
+            },
+            "require": {
+                "campo/random-user-agent": "^1.2",
+                "maciejczyzewski/bottomline": "^0.0.9",
+                "thesoftwarefanatics/php-html-parser": "^1.8.0"
+            },
+            "require-dev": {
+                "kahlan/kahlan": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Buchin\\GoogleImageGrabber\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mochammad Masbuchin",
+                    "email": "buchin@dropsugar.com"
+                }
+            ],
+            "description": "Scrape google images",
+            "time": "2018-05-16T12:40:20+00:00"
+        },
+        {
+            "name": "campo/random-user-agent",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joecampo/random-user-agent.git",
+                "reference": "4a88bd90f66ca398b050b19848e3c6ea143ce8a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joecampo/random-user-agent/zipball/4a88bd90f66ca398b050b19848e3c6ea143ce8a0",
+                "reference": "4a88bd90f66ca398b050b19848e3c6ea143ce8a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Campo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Campo",
+                    "email": "jcampo@gmail.com"
+                }
+            ],
+            "description": "Generate real random user-agents.",
+            "keywords": [
+                "spoofing user",
+                "user agent",
+                "user agents",
+                "user-agent"
+            ],
+            "time": "2018-06-13T14:26:21+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.8.0",
@@ -262,6 +348,99 @@
                 "symfony"
             ],
             "time": "2019-11-30T12:18:02+00:00"
+        },
+        {
+            "name": "maciejczyzewski/bottomline",
+            "version": "0.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maciejczyzewski/bottomline.git",
+                "reference": "b3d6c4ec2c3eedacf4ab6337cc216149e4af3fb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maciejczyzewski/bottomline/zipball/b3d6c4ec2c3eedacf4ab6337cc216149e4af3fb0",
+                "reference": "b3d6c4ec2c3eedacf4ab6337cc216149e4af3fb0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bottomline.php"
+                ],
+                "psr-4": {
+                    "__\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maciej A. Czyzewski",
+                    "email": "maciejanthonyczyzewski@gmail.com"
+                }
+            ],
+            "description": "A full-on PHP manipulation utility-belt that provides support for the usual functional.",
+            "keywords": [
+                "__",
+                "bottomline",
+                "functions",
+                "library",
+                "utility"
+            ],
+            "time": "2017-01-05T18:24:44+00:00"
+        },
+        {
+            "name": "paquettg/string-encode",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paquettg/string-encoder.git",
+                "reference": "cf08343649701979f581c1601d01247fa3782439"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paquettg/string-encoder/zipball/cf08343649701979f581c1601d01247fa3782439",
+                "reference": "cf08343649701979f581c1601d01247fa3782439",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "stringEncode": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gilles Paquette",
+                    "email": "paquettg@gmail.com",
+                    "homepage": "http://gillespaquette.ca"
+                }
+            ],
+            "description": "Facilitating the process of altering string encoding in PHP.",
+            "homepage": "https://github.com/paquettg/string-encoder",
+            "keywords": [
+                "charset",
+                "encoding",
+                "string"
+            ],
+            "time": "2014-05-29T18:38:09+00:00"
         },
         {
             "name": "psr/cache",
@@ -1500,6 +1679,131 @@
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
             "time": "2019-12-17T08:15:02+00:00"
+        },
+        {
+            "name": "symfony/http-client",
+            "version": "v4.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client.git",
+                "reference": "9ebfc77b5018a05226b38642def82746f3e2ce0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/9ebfc77b5018a05226b38642def82746f3e2ce0f",
+                "reference": "9ebfc77b5018a05226b38642def82746f3e2ce0f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "psr/log": "^1.0",
+                "symfony/http-client-contracts": "^1.1.8|^2",
+                "symfony/polyfill-php73": "^1.11",
+                "symfony/service-contracts": "^1.0|^2"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "*",
+                "php-http/client-implementation": "*",
+                "psr/http-client-implementation": "1.0",
+                "symfony/http-client-implementation": "1.1"
+            },
+            "require-dev": {
+                "guzzlehttp/promises": "^1.3.1",
+                "nyholm/psr7": "^1.0",
+                "php-http/httplug": "^1.0|^2.0",
+                "psr/http-client": "^1.0",
+                "symfony/dependency-injection": "^4.3|^5.0",
+                "symfony/http-kernel": "^4.4",
+                "symfony/process": "^4.2|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpClient\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpClient component",
+            "homepage": "https://symfony.com",
+            "time": "2019-12-19T15:57:49+00:00"
+        },
+        {
+            "name": "symfony/http-client-contracts",
+            "version": "v1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "088bae75cfa2ec5eb6d33dce17dbd8613150ce6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/088bae75cfa2ec5eb6d33dce17dbd8613150ce6e",
+                "reference": "088bae75cfa2ec5eb6d33dce17dbd8613150ce6e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "suggest": {
+                "symfony/http-client-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\HttpClient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to HTTP clients",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-11-07T12:44:51+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -3069,6 +3373,68 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2019-12-10T10:33:21+00:00"
+        },
+        {
+            "name": "thesoftwarefanatics/php-html-parser",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thesoftwarefanatics/php-html-parser.git",
+                "reference": "2dff8676821bdbc309f64980a96b4c62020c79c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thesoftwarefanatics/php-html-parser/zipball/2dff8676821bdbc309f64980a96b4c62020c79c3",
+                "reference": "2dff8676821bdbc309f64980a96b4c62020c79c3",
+                "shasum": ""
+            },
+            "require": {
+                "paquettg/string-encode": "^0.1.1",
+                "php": "^7.1"
+            },
+            "replace": {
+                "paquettg/php-html-parser": "self.version"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PHPHtmlParser": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gilles Paquette",
+                    "email": "paquettg@gmail.com",
+                    "homepage": "http://gillespaquette.ca"
+                },
+                {
+                    "name": "The Software Fanatics GmbH",
+                    "email": "dev@thesoftwarefanatics.com",
+                    "homepage": "https://thesoftwarefanatics.com"
+                }
+            ],
+            "description": "An HTML DOM parser. It allows you to manipulate HTML. Find tags on an HTML page with selectors just like jQuery.",
+            "homepage": "https://github.com/thesoftwarefanatics/php-html-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2018-12-21T07:45:56+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -5087,7 +5453,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "buchin/google-image-grabber": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

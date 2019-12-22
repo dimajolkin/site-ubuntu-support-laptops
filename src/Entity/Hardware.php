@@ -38,6 +38,16 @@ class Hardware
      */
     private $link;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\HardwareImage", mappedBy="hardware", orphanRemoval=true)
+     */
+    private $images;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -96,6 +106,37 @@ class Hardware
     public function setLink(string $link): self
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|HardwareImage[]
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(HardwareImage $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setHardware($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(HardwareImage $image): self
+    {
+        if ($this->images->contains($image)) {
+            $this->images->removeElement($image);
+            // set the owning side to null (unless already changed)
+            if ($image->getHardware() === $this) {
+                $image->setHardware(null);
+            }
+        }
 
         return $this;
     }

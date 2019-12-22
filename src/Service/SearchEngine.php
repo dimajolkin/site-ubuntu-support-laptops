@@ -8,6 +8,6 @@ class SearchEngine
 {
     public function getYandex()
     {
-        return new YandexMarket();
+        return new Yandex();
     }
 }
